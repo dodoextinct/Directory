@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    tools:context="com.example.yashkrishan.directory.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#e74c3c">
+        <EditText
+            android:id="@+id/name"
+            android:textSize="15sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="clip_horizontal"
+            android:hint="NAME"
+            android:backgroundTint="#fff"
+            android:fitsSystemWindows="true"
+            android:breakStrategy="balanced"
+            android:singleLine="true"
+            android:padding="5dp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#e74c3c">
+        <EditText
+            android:id="@+id/mob"
+            android:textSize="15sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="clip_horizontal"
+            android:hint="MOBILE NO"
+            android:backgroundTint="#fff"
+            android:fitsSystemWindows="true"
+            android:breakStrategy="balanced"
+            android:singleLine="true"
+            android:padding="5dp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#e74c3c">
+        <EditText
+            android:id="@+id/date"
+            android:backgroundTint="#fff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="clip_horizontal"
+            android:hint="DATE OF BIRTH"
+            android:fitsSystemWindows="true"
+            android:breakStrategy="balanced"
+            android:singleLine="true"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#e74c3c">
+        <EditText
+            android:id="@+id/location"
+            android:textSize="15sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="clip_horizontal"
+            android:hint="LOCATION"
+            android:backgroundTint="#fff"
+            android:fitsSystemWindows="true"
+            android:breakStrategy="balanced"
+            android:singleLine="true"
+            android:padding="5dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#e74c3c">
+        <EditText
+            android:id="@+id/blood"
+            android:textSize="15sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="clip_horizontal"
+            android:hint="BLOOD GROUP"
+            android:backgroundTint="#fff"
+            android:fitsSystemWindows="true"
+            android:breakStrategy="balanced"
+            android:singleLine="true"
+            android:padding="5dp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#e74c3c">
+        <EditText
+            android:id="@+id/unique"
+            android:textSize="15sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="clip_horizontal"
+            android:hint="ID"
+            android:backgroundTint="#fff"
+            android:fitsSystemWindows="true"
+            android:breakStrategy="balanced"
+            android:singleLine="true"
+            android:padding="5dp" />
+    </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
