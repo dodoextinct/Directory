@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //initialising fields to get data from
         dob = (EditText)findViewById(R.id.date);
         name= (EditText)findViewById(R.id.name);
         mob = (EditText)findViewById(R.id.mob);
@@ -42,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
         id = (EditText)findViewById(R.id.unique);
         bg = (EditText)findViewById(R.id.blood);
 
+        //creatig database reference
         root = FirebaseDatabase.getInstance().getReference("info");
+        
+        //initialising button send data
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 send();
             }
         });
+        
+        //initialising button referesh
         FloatingActionButton ref = (FloatingActionButton)findViewById(R.id.fab1);
         ref.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //initialising button data viewer
         FloatingActionButton doc = (FloatingActionButton)findViewById(R.id.fab2);
         doc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //initalising date lister for date of visit
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
             @Override
@@ -86,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
         };
 
+        //setting data picker for date of birth
         dob.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -107,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    //send data to database
     private void send(){
         String n = name.getText().toString();
         String b = bg.getText().toString();
@@ -117,18 +128,22 @@ public class MainActivity extends AppCompatActivity {
 
         if(TextUtils.isEmpty(n) || TextUtils.isEmpty(b) || TextUtils.isEmpty(d) || TextUtils.isEmpty(l) || TextUtils.isEmpty(i)
                 || TextUtils.isEmpty(m)){
+            //if any of the field remains empty, no data will be send
             Toast.makeText(this, "Details incomplete!!", Toast.LENGTH_SHORT).show();
         }
         else{
-            String id = root.push().getKey();
+            //sending data
+            String id = root.push().getKey();//key given by the firebase itself
+            
+            //creating new person object for each data
             Person person = new Person(b,d,i,l,m,n);
-            root.child(id).setValue(person);
+            root.child(id).setValue(person);//sending data
         }
     }
 
     @Override
     public void onBackPressed() {
-        finish();
+        finish();//kills the activity
         super.onBackPressed();
     }
 }
