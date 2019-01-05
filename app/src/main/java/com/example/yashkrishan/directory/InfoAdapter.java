@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+//Adapter class for list 
 public class InfoAdapter extends ArrayAdapter {
 
     public InfoAdapter(Context context, ArrayList<Person> person) {
