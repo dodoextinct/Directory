@@ -4,7 +4,10 @@ package com.example.yashkrishan.directory;
  * Created by yashkrishan on 4/1/19.
  */
 
+//Model Class for the data
+
 public class Person {
+    //all the variables for the data is declared
     private String bg;
     private String dob;
     private String id;
@@ -13,6 +16,7 @@ public class Person {
     public String name;
 
     public Person(String bg, String dob, String id, String loc, String mob, String name) {
+        //constructors for initialisation
         this.bg = bg;
         this.dob = dob;
         this.id = id;
@@ -21,8 +25,12 @@ public class Person {
         this.name = name;
     }
 
-    public Person(){}
+    public Person(){
+    //emoty constructor
+    }
 
+    
+    //setter methods and getter methods
     public void setName(String name) {
         this.name = name;
     }
